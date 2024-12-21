@@ -4,12 +4,12 @@ kernel_injector Созданый нейросетью (это всё тесто�
 # Структура проекта:
 
 project/<br>
-├── driver/<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;└── kernel_injector.cpp<br>
-├── test_app/<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;└── main.cpp<br>
+├── driver/<br> 
+│&nbsp;&nbsp;&nbsp;&nbsp;└── kernel_injector.cpp<br> #Драйверный inkector .dll файлов
+├── test_app/<br> # Тестовое приложение с поддержкой directX9,10,10.1,11
+│&nbsp;&nbsp;&nbsp;&nbsp;└── main.cpp<br> # Файл сборки
 ├── injector/<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;└── injector.cpp<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;└── injector.cpp<br> 
 └── imgui_dll/<br>
 &nbsp;&nbsp;&nbsp;&nbsp;├── dllmain.cpp<br>
 &nbsp;&nbsp;&nbsp;&nbsp;└── imgui/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Папка с файлами ImGui<br>
