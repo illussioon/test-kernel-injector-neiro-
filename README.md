@@ -3,24 +3,24 @@ kernel_injector Созданый нейросетью (это всё тесто�
 
 # Структура проекта:
   project/</br>
-  ├── driver/
-  │   └── kernel_injector.cpp
-  ├── test_app/
-  │   └── main.cpp
-  ├── injector/
-  │   └── injector.cpp
-  └── imgui_dll/
-      ├── dllmain.cpp
-      └── imgui/              # Папка с файлами ImGui
-          ├── imgui.h
-          ├── imgui.cpp
-          ├── imgui_internal.h
-          ├── imgui_draw.cpp
-          ├── imgui_widgets.cpp
-          ├── imgui_tables.cpp
-          ├── imconfig.h
-          └── backends/       # Подпапка с бэкендами
-              ├── imgui_impl_dx11.h
-              ├── imgui_impl_dx11.cpp
-              ├── imgui_impl_win32.h
-              └── imgui_impl_win32.cpp
+  ├── driver/</br>
+  │   └── kernel_injector.cpp</br>
+  ├── test_app/</br>
+  │   └── main.cpp</br>
+  ├── injector/</br>
+  │   └── injector.cpp</br>
+  └── imgui_dll/</br>
+      ├── dllmain.cpp</br>
+      └── imgui/              # Папка с файлами ImGui</br>
+          ├── imgui.h</br>
+          ├── imgui.cpp</br>
+          ├── imgui_internal.h</br>
+          ├── imgui_draw.cpp</br>
+          ├── imgui_widgets.cpp</br>
+          ├── imgui_tables.cpp</br>
+          ├── imconfig.h</br>
+          └── backends/       # Подпапка с бэкендами</br>
+              ├── imgui_impl_dx11.h</br>
+              ├── imgui_impl_dx11.cpp</br>
+              ├── imgui_impl_win32.h</br>
+              └── imgui_impl_win32.cpp</br>
