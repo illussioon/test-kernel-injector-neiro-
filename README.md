@@ -1,8 +1,8 @@
-# test-kernel-injector-neiro-
+ # test-kernel-injector-neiro-
 kernel_injector Созданый нейросетью (это всё тестовое и я не заверяю что работает)
 
 # Структура проекта:
-  project/
+  project/</br>
   ├── driver/
   │   └── kernel_injector.cpp
   ├── test_app/
