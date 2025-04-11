@@ -1,0 +1,62 @@
+;
+; TestKernelDriver.inf
+;
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = System ; TODO: specify appropriate Class
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider    = %ManufacturerName%
+CatalogFile = TestKernelDriver.cat
+DriverVer   = ; TODO: set DriverVer in stampinf property pages
+PnpLockdown = 1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+TestKernelDriver.sys = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName% = Standard,NT$ARCH$.10.0...16299 ; %13% support introduced in build 16299
+
+[Standard.NT$ARCH$.10.0...16299]
+%TestKernelDriver.DeviceDesc% = TestKernelDriver_Device, Root\TestKernelDriver ; TODO: edit hw-id
+
+[TestKernelDriver_Device.NT]
+CopyFiles = File_Copy
+
+[File_Copy]
+TestKernelDriver.sys
+
+;-------------- Service installation
+[TestKernelDriver_Device.NT.Services]
+AddService = TestKernelDriver,%SPSVCINST_ASSOCSERVICE%, TestKernelDriver_Service_Inst
+
+; -------------- TestKernelDriver driver install sections
+[TestKernelDriver_Service_Inst]
+DisplayName    = %TestKernelDriver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %13%\TestKernelDriver.sys
+
+[TestKernelDriver_Device.NT.Wdf]
+KmdfService = TestKernelDriver, TestKernelDriver_wdfsect
+
+[TestKernelDriver_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002
+ManufacturerName = "<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "TestKernelDriver Installation Disk"
+TestKernelDriver.DeviceDesc = "TestKernelDriver Device"
+TestKernelDriver.SVCDESC = "TestKernelDriver Service"

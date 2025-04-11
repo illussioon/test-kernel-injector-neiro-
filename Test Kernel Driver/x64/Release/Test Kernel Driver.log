@@ -1,0 +1,9 @@
+﻿  Building 'Test Kernel Driver' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Release\TestKernelDriver.inf
+  Stamping [Version] section with DriverVer=04/11/2025,14.50.26.761
+  driver.c
+  Test Kernel Driver.vcxproj -> C:\Users\user\source\repos\Test Kernel Driver\x64\Release\TestKernelDriver.sys
+  Done Adding Additional Store
+  Successfully signed: C:\Users\user\source\repos\Test Kernel Driver\x64\Release\TestKernelDriver.sys
+  
+  Driver is 'Universal'.
